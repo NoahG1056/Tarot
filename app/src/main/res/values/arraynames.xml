@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="name">
+    <item>The Fool</item>
+    <item>The Magician</item>
+    <item>The Empress</item>
+    <item>The Emperor</item>
+    <item>The Pope</item>
+    <item>The Lovers</item>
+    <item>The Chariot</item>
+    <item>La Justice</item>
+    <item>The Hermit</item>
+    <item>The Wheel of Fortune</item>
+    <item>The Force</item>
+    <item>The Hanged Man</item>
+    <item>The Death</item>
+    <item>The Temperance</item>
+    <item>The Devil</item>
+    <item>The Tower</item>
+    <item>The Star</item>
+    <item>The Moon</item>
+    <item>The Sun</item>
+    <item>The Judgement</item>
+    <item>The World</item>
+
+
+</string-array>
+</resources>
