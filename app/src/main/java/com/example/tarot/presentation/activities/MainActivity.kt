@@ -22,6 +22,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var vm: MainViewModel
+    
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,12 +35,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
         val button=binding.button2
         val DayCardIntent = Intent(this, DayCardActivity::class.java)
-        val progressbar=binding.progressCircular
         button.setOnClickListener {
             startActivity(DayCardIntent)
         }
     }
-
-
-
 }
