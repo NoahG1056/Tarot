@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val view=binding.root
         setContentView(view)
+
         val button=binding.button2
         val DayCardIntent = Intent(this, DayCardActivity::class.java)
         button.setOnClickListener {

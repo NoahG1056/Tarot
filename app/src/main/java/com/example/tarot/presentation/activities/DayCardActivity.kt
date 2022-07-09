@@ -1,13 +1,9 @@
 package com.example.tarot.presentation.activities
 
-import android.annotation.SuppressLint
-import android.content.SharedPreferences
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.View.VISIBLE
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
@@ -17,7 +13,6 @@ import com.example.tarot.data.repository.CardRepositoryImpl
 import com.example.tarot.domain.usecase.*
 
 import com.squareup.picasso.Picasso
-import java.util.*
 
 class DayCardActivity : AppCompatActivity() {
     val oblojka = "https://thumbs.dreamstime.com/b/boho-209384272.jpg"
@@ -29,7 +24,7 @@ class DayCardActivity : AppCompatActivity() {
         val cardRepository = CardRepositoryImpl(context = applicationContext)
         val getIndexCardOfDayUseCase = GetIndexCardOfDayUseCase(cardRepository = cardRepository)
         val saveCardOfDayUSeCase = SaveCardOfDayUSeCase(cardRepository = cardRepository)
-        val saveCurrentDate = SaveCurrentDate(cardRepository = cardRepository)
+        val saveCurrentDateUseCase = SaveCurrentDateUseCase(cardRepository = cardRepository)
         val alreadyExistCardOfDayUseCase = AlreadyExistCardOfDayUseCase(cardRepository = cardRepository)
         val getCardOfDayUSeCase = GetCardOfDayUseCase()
 
@@ -57,7 +52,7 @@ class DayCardActivity : AppCompatActivity() {
             image.setOnClickListener {
                 val card = getCardOfDayUSeCase.execute()
                 saveCardOfDayUSeCase.execute(card)
-                saveCurrentDate.execute()
+                saveCurrentDateUseCase.execute()
                 Picasso.get().load(arraimage[card]).resize(800, 1200).into(image)
                 image.startAnimation(AnimationUtils.loadAnimation(this, R.anim.scalealpha))
                 mean.startAnimation(AnimationUtils.loadAnimation(this, R.anim.scalealpha))
