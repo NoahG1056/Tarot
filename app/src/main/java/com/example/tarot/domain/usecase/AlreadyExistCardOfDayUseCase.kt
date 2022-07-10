@@ -8,7 +8,6 @@ class AlreadyExistCardOfDayUseCase(private val cardRepository: CardRepository) {
     fun execute(): Boolean {
         if (Calendar.DATE == cardRepository.getLastDate()) {
             return true
-
         }
         return false
     }

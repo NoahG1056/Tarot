@@ -39,7 +39,10 @@ dependencies {
     def gson="2.9.0"
     def picasso_version="2.71828"
     def lifecycle_version="2.5.0-rc02"
-
+    def koin_version="3.2.0"
+    //Koin
+    implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
     //Gson
     implementation "com.google.code.gson:gson:$gson"
     // ViewModel
