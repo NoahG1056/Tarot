@@ -2,7 +2,7 @@ Description
 
 Сделал приложение для раскладов карт таро. Раз в день у пользователя появляется карта таро с соответствующим описанием карты ее названием и изображением
 
-Библиотеки : Picasso, View binding, Retrofit, Gson, Viewmodel
+Библиотеки : Picasso,Koin, View binding, Retrofit, Gson, Viewmodel
 
 Разбиение приложения на data, domain, presentation слои
 Использование MVVM патерна
